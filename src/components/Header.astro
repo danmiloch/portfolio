@@ -1,0 +1,81 @@
+---
+import '../styles/global.css';
+import HeaderLink from './HeaderLink.astro'
+---
+
+<header class="flex">
+  <div class="header__content container">
+    <div class="header__lockup">
+      <h1 class="lockup__title"><a href="/">Dan Miloch</a></h1><span
+        class="lockup__role">Product Designer</span
+      >
+    </div>
+    <nav>
+      <ul class="header__nav">
+        <li class="nav__link"><HeaderLink href="/work">Work</HeaderLink></li>
+        <li class="nav__link"><HeaderLink href="/blog">Blog</HeaderLink></li>
+        <li class="nav__link"><HeaderLink href="/contact">Contact</HeaderLink></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+
+  .header__content {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    width: 100%;
+    align-items: baseline;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .header__lockup {
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .lockup__role {
+    font-family: "Besley";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1;
+    font-style: italic;
+    color: #666;
+    margin-right: 2.5rem;
+  }
+
+  .lockup__title {
+    line-height: 1;
+  }
+
+  .lockup__title a {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-family: "Besley";
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    margin-right: 0.5rem;
+  }
+
+  .header__nav {
+    font-family: "Inter", sans-serif;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+    font-size: 14px;
+    margin-left: -10px;
+  }
+
+
+
+</style>

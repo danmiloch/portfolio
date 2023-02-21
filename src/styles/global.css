@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,500;1,400&display=swap");
+
+
+:root {
+
+}
+
+
+body {
+  color: #333;
+  height: 100vh;
+}
+
+/* Container constrains max-width and adds a little padding for small screens */
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
