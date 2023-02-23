@@ -10,6 +10,8 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@fontsource/besley": "^4.5.13",
+		"@fontsource/inter": "^4.5.15",
 		"astro": "^2.0.12"
 	}
 }
