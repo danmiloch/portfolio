@@ -3,7 +3,7 @@ import '../styles/global.css';
 import HeaderLink from './HeaderLink.astro'
 ---
 
-<header class="flex">
+<header>
   <div class="header__content container">
     <div class="header__lockup">
       <h1 class="lockup__title"><a href="/">Dan Miloch</a></h1><span
@@ -28,7 +28,7 @@ import HeaderLink from './HeaderLink.astro'
     row-gap: 1rem;
     width: 100%;
     align-items: baseline;
-    position: absolute;
+    /* position: absolute; */
     top: 2rem;
     left: 0;
     right: 0;
@@ -67,12 +67,9 @@ import HeaderLink from './HeaderLink.astro'
   }
 
   .header__nav {
-    font-family: "Inter", sans-serif;
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     column-gap: 1.25rem;
-    font-size: 14px;
     margin-left: -10px;
   }
 

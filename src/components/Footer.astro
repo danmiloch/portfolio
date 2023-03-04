@@ -1,0 +1,79 @@
+---
+import "../styles/global.css";
+---
+
+<footer>
+  <div class="footer__content container">
+    <section class="footer__nav">
+      <ul class="footer__list">
+        <li><a href="/work" class="footer__link">Work</a></li>
+        <li><a href="/blog" class="footer__link">Blog</a></li>
+        <li><a href="/contact" class="footer__link">Contact</a></li>
+        <li><a href="" class="footer__link">LinkedIn</a></li>
+        <li><a href="" class="footer__link">Resume</a></li>
+      </ul>
+    </section>
+    <section class="footer__small-print">
+      <a class="footer__link" href="/colophon">Colophon</a>
+      <p class="footer__copyright">&copy 2023 Dan Miloch</p>
+    </section>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #2a3f21;
+    padding: 3rem 0;
+  }
+
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    /*   align-items: baseline; */
+  }
+
+  .footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    column-gap: 3rem;
+  }
+
+  .footer__link {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #b8c4bb;
+    line-height: 1.25;
+    text-decoration: none;
+  }
+
+  .footer__copyright {
+    font-family: "Besley", serif;
+    font-style: italic;
+    color: #80BD66;
+    min-width: 100%;
+    line-height: 1.25;
+  }
+
+  .footer__small-print {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  @media (min-width: 550px) {
+    .footer__content,
+    .footer__list,
+    .footer__small-print {
+      flex-direction: row;
+    }
+
+    .footer__nav {
+      margin-right: auto;
+    }
+  }
+</style>

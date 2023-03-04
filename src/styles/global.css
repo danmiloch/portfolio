@@ -3,6 +3,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: #333;
   height: 100vh;
+  font-size: 16px;
 }
 
 /* Container constrains max-width and adds a little padding for small screens */
