@@ -32,7 +32,7 @@ import "../styles/global.css";
     flex-wrap: wrap;
     column-gap: 3rem;
     row-gap: 1rem;
-    /*   align-items: baseline; */
+    align-items: baseline;
   }
 
   .footer__list {
@@ -46,10 +46,21 @@ import "../styles/global.css";
   .footer__link {
     font-size: 16px;
     font-family: "Inter", sans-serif;
+    padding: 6px 10px;
+    border-radius: 2px;
     color: #b8c4bb;
     line-height: 1.25;
     text-decoration: none;
+    margin-left: -10px;
+
   }
+
+  .footer__link:hover { 
+    background-color: var(--moss-500);
+    color: var(--moss-200); 
+    transition: all 0.2s ease-in-out;
+  }
+
 
   .footer__copyright {
     font-family: "Besley", serif;
@@ -63,6 +74,7 @@ import "../styles/global.css";
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    align-items: baseline;
   }
 
   @media (min-width: 550px) {

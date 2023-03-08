@@ -1,6 +1,107 @@
+/* ---------------------------------------------------------------------------------------------
+RESET
+(Based on ‘A Modern CSS Reset’ by Andy Bell: https://dev.to/hankchizljaw/a-modern-css-reset-6p3)
+--------------------------------------------------------------------------------------------- */
+
+/* Remove default margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core defaults */
+html,
+body {
+  background-color: #fff;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images & embeds easier to work with */
+img,
+iframe,
+video {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*  VARIABLES */
+
+:root {
+  --moss-100: #FCFCFC;
+  --moss-200: #EAEFEC;
+  --moss-300: #B8C4BB;
+  --moss-400: #80BD66;
+  --moss-500: #557B42;
+  --moss-600: #2A3F21;
+  --sock-400: #FF7745;
+  --sock-500: #F25824;
+  --sock-600: #6F2107;
+  --panda-100:#FFFFFF;
+  --panda-200:#F3F3F3;
+  --panda-300:#BFBFBF;
+  --panda-400:#999999;
+  --panda-500:#666666;
+  --panda-600:#333333;
+  --color-bg: var(--moss-100);
+  --color-text: var(--panda-600);
+  --color-primary-600 ;
+  --color-primary-500 ;
+  --color-primary-400;
+  --color-primary-300 ;
+  --color-primary-200 ;
+  --color-primary-100;
+  --color-secondary ;
+  --color-neutral ;
+  --space-;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: "Inter", sans-serif;
   color: #333;
   height: 100vh;
   font-size: 16px;
@@ -9,7 +110,18 @@ body {
 /* Container constrains max-width and adds a little padding for small screens */
 
 .container {
-    max-width: 1220px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+body {
+  animation: body-animation 1.6s;
+}
+
+@keyframes body-animation {
+ from {
+  opacity:0
+ }
+}
