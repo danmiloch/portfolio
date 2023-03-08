@@ -97,12 +97,13 @@ select {
   --color-secondary ;
   --color-neutral ;
   --space-;
+  --trans: all 0.2s ease-in-out;
 }
 
 body {
   background-color: var(--color-bg);
   font-family: "Inter", sans-serif;
-  color: #333;
+  color: var(--panda-600);
   height: 100vh;
   font-size: 16px;
 }
@@ -117,7 +118,7 @@ body {
 
 
 body {
-  animation: body-animation 1.6s;
+  animation: body-animation 1s;
 }
 
 @keyframes body-animation {

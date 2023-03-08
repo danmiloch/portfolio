@@ -22,7 +22,7 @@ import "../styles/global.css";
 
 <style>
   footer {
-    background-color: #2a3f21;
+    background-color: var(--moss-600);
     padding: 3rem 0;
   }
 
@@ -48,24 +48,24 @@ import "../styles/global.css";
     font-family: "Inter", sans-serif;
     padding: 6px 10px;
     border-radius: 2px;
-    color: #b8c4bb;
+    color: var(--moss-300);
     line-height: 1.25;
     text-decoration: none;
     margin-left: -10px;
-
+    transition: var(--trans);
   }
 
   .footer__link:hover { 
     background-color: var(--moss-500);
     color: var(--moss-200); 
-    transition: all 0.2s ease-in-out;
+    
   }
 
 
   .footer__copyright {
     font-family: "Besley", serif;
     font-style: italic;
-    color: #80BD66;
+    color: var(--moss-500);
     min-width: 100%;
     line-height: 1.25;
   }
