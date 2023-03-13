@@ -22,6 +22,11 @@ import HeaderLink from './HeaderLink.astro'
 
 <style>
 
+  header {
+    margin-top: 3rem;
+    grid-area: header;
+  }
+
   .header__content {
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +49,7 @@ import HeaderLink from './HeaderLink.astro'
 
   .lockup__role {
     font-family: "Besley";
-    font-weight: 400;
+    font-weight: var(--weight-base);
     font-size: 1rem;
     line-height: 1;
     font-style: italic;

@@ -3,6 +3,156 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
-    <h1>Here's a heading</h1>
+    <div class="container">
+    <h1>Designing digital tools for serious work</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, facilis doloremque. Illum eos perspiciatis qui deleniti inventore, sequi deserunt obcaecati animi ea odio. Similique.</p>
+</div>
+
+<section class="experience">
+    <div class="container">
+    <h4 class="experience__subhead">Work Experience</h4>
+    <div class="grid--default grid--two-up">
+  
+      <div class="grid--default experience__">
+        <p class="experience__title">I’ve been helping companies build better products since 2018.</p>
+        <p class="experience__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, vitae nobis. Dolor eius quae quibusdam repellat aliquid officia voluptatum eaque error molestiae unde. Blanditiis.</p>
+      </div>
+  
+      <ul class="experience__list">
+        <li class="grid--default experience__item">
+          <p class="meta-data">2021 &#8211; Now</p>
+          <div>
+            <p class="experience__item__title">Sr. Product Designer</p>
+            <p class="meta-data">Sunfire</p>
+          </div>
+        </li>
+        <li class="grid--default experience__item">
+          <p class="meta-data">2017 &#8211; 2021</p>
+          <div>
+            <p class="experience__item__title">UX Designer</p>
+            <p class="meta-data">Auto-Owners Insurance</p>
+          </div>
+        </li>
+        <li class="grid--default experience__item">
+          <p class="meta-data">2015 &#8211; 2017</p>
+          <div>
+            <p class="experience__item__title">Business Analyst</p>
+            <p class="meta-data">Auto-Owners Insurance</p>
+          </div>
+        </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+
+.experience {
+  background-color: var(--moss-600);
+  font-family: var(--font-sans);
+  color: var(--moss-100);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-base);
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  font-weight: var(--weight-med);
+  line-height: var(--leading-xs);
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-lg);
+  font-weight: var(--weight-med);
+  line-height: var(--leading-sm);
+}
+
+/* The rest is custom */
+
+.grid--default {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+h4 {
+  color: var(--socks-400);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-base);
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-body);
+}
+
+.two-up__title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-lg);
+  font-weight: var(--weight-med);
+  line-height: var(--leading-sm);
+}
+
+.grid--two-up {
+  grid-template-columns: 1fr;
+  column-gap: 7%;
+  row-gap: 2.5rem;
+  align-items: baseline;
+}
+
+.experience__subhead {
+  margin-bottom: 1.5rem;
+  font-weight: var(--weight-base);
+  letter-spacing: 1px;
+}
+
+.experience__copy {
+  color: var(--moss-300);
+}
+
+.meta-data {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: var(--moss-300);
+/*   white-space: nowrap; */
+}
+
+.experience__title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-lg);
+  color: var(--moss-100);
+  font-weight: var(--weight-base);
+}
+
+.experience__item {
+  grid-template-columns: 1fr;
+}
+
+.experience__list {
+  display: grid;
+  row-gap: 3rem;
+}
+
+
+
+@media (min-width: 865px) {
+  .grid--two-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 550px){
+  .experience__item {
+    grid-template-columns: 8rem minmax(8rem, auto);
+    row-gap: .5rem;
+  }
+}
+</style>
