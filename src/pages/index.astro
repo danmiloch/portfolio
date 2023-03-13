@@ -55,7 +55,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   font-size: 18px;
   display: flex;
   align-items: center;
-  padding: 10rem 0;
+  padding: 10rem 0 8rem 0;
 }
 
 .container {
@@ -80,11 +80,6 @@ h2 {
 
 /* The rest is custom */
 
-.grid--default {
-  display: grid;
-  grid-gap: 1rem;
-}
-
 h4 {
   color: var(--socks-400);
   font-family: var(--font-sans);
@@ -103,7 +98,7 @@ h4 {
 
 .grid--two-up {
   grid-template-columns: 1fr;
-  column-gap: 7%;
+  /* column-gap: 4rem; */
   row-gap: 2.5rem;
   align-items: baseline;
 }
@@ -145,7 +140,8 @@ h4 {
 
 @media (min-width: 865px) {
   .grid--two-up {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 7rem;
   }
 }
 

@@ -131,6 +131,11 @@ body {
   padding: var(--padding-base);
 }
 
+.grid--default {
+  display: grid;
+  grid-gap: 1rem;
+}
+
 h1 {
   font-family: var(--font-serif);
   font-size: var(--font-size-xl);
