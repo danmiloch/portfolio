@@ -133,7 +133,8 @@ body {
 
 .grid--default {
   display: grid;
-  grid-gap: 1rem;
+  row-gap: 1rem;
+  column-gap: 1rem;
 }
 
 h1 {
