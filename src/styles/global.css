@@ -157,6 +157,5 @@ h4.subhead {
   text-transform: uppercase;
   font-size: var(--font-size-sm);
   line-height: var(--leading-body);
-  margin-bottom: 1.5rem;
   letter-spacing: 1px;
 }

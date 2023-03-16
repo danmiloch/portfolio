@@ -3,30 +3,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-
-<section class="my-approach">
+  <section class="my-approach">
     <div class="container">
-        <img src="" alt="">
-
+      <img src="" alt="" />
+      <div class="grid-default grid--two-up">
+        <div class="grid--default">
+          <h4 class="subhead">My Approach</h4>
+          <p class="section__title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam eos
+            facilis fugiat.
+          </p>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+          dolores harum ipsum similique maxime iusto, a itaque! Est temporibus
+          sapiente architecto consectetur at?
+        </p>
+      </div>
     </div>
-</section>
-
-
-  <div class="container">
-    <h1>Designing digital tools for serious work</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
-      facilis doloremque. Illum eos perspiciatis qui deleniti inventore, sequi
-      deserunt obcaecati animi ea odio. Similique.
-    </p>
-  </div>
+  </section>
 
   <section class="experience">
     <div class="container">
       <h4 class="subhead experience__subhead">Work Experience</h4>
       <div class="grid--default grid--two-up">
         <div class="grid--default experience__">
-          <p class="experience__title">
+          <p class="section__title section__title--experience">
             I’ve been helping companies build better products since 2018.
           </p>
           <p class="experience__copy">
@@ -65,19 +67,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </BaseLayout>
 
 <style>
-
-.grid--default {
+  .grid--default {
     display: grid;
     gap: 1rem;
   }
 
+  /* MY APPROACH */
 
-/* MY APPROACH */
-
-
-
-
-/* WORK EXPERIENCE  */
+  /* WORK EXPERIENCE  */
 
   .experience {
     background-color: var(--moss-600);
@@ -85,8 +82,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     color: var(--moss-100);
     font-size: 18px;
     display: flex;
-  align-items: center;
+    align-items: center;
     padding: 4rem 0;
+  }
+
+  .section__title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-lg);
+    font-weight: var(--weight-base);
   }
 
   /* The rest is custom */
@@ -104,6 +107,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     align-items: baseline;
   }
 
+  .section__title--approach {
+    color: var(--moss-300);
+  }
+
   .experience__subhead {
     color: var(--socks-400);
   }
@@ -119,11 +126,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     white-space: nowrap;
   }
 
-  .experience__title {
-    font-family: var(--font-serif);
-    font-size: var(--font-size-lg);
+  .section__title--experience {
     color: var(--moss-100);
-    font-weight: var(--weight-base);
   }
 
   .experience__item {
