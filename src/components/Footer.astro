@@ -45,12 +45,12 @@ import "../styles/global.css";
   }
 
   .footer__link {
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
+    font-size: var(--font-size-base);
+    font-family: var(--font-sans);
     padding: 6px 10px;
     border-radius: 2px;
     color: var(--moss-300);
-    line-height: 1.25;
+    line-height: var(--leading-xs);
     text-decoration: none;
     margin-left: -10px;
     transition: var(--trans-base);
@@ -64,10 +64,10 @@ import "../styles/global.css";
 
 
   .footer__copyright {
-    font-family: "Besley", serif;
+    font-family: var(--font-serif);
     font-style: italic;
     color: var(--moss-500);
-    min-width: 100%;
+    /* min-width: 100%; */
     line-height: 1.25;
   }
 

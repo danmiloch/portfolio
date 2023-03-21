@@ -1,0 +1,131 @@
+---
+import "@fontsource/inter/400.css";
+import "@fontsource/besley/400-italic.css";
+import "@fontsource/besley/500.css";
+import "../styles/global.css";
+---
+
+
+<section class="experience">
+    <div class="container grid">
+      <h4 class="subhead experience__subhead">Work Experience</h4>
+      <div class="grid grid--two-up">
+        <div class="grid experience__">
+          <p class="section__title section__title--experience">
+            I’ve been helping companies build better products since 2018.
+          </p>
+          <p class="experience__copy">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, vitae nobis. Dolor eius quae quibusdam repellat aliquid
+            officia voluptatum eaque error unde. Blanditiis. <a href="#">check it out.</a>
+          </p>
+        </div>
+
+        <ul class="experience__list">
+          <li class="grid experience__item">
+            <p class="meta-data">2021 &#8211; Now</p>
+            <div>
+              <p class="experience__item__title">Sr. Product Designer</p>
+              <p class="meta-data">Sunfire</p>
+            </div>
+          </li>
+          <li class="grid experience__item">
+            <p class="meta-data">2017 &#8211; 2021</p>
+            <div>
+              <p class="experience__item__title">UX Designer</p>
+              <p class="meta-data">Auto-Owners Insurance</p>
+            </div>
+          </li>
+          <li class="grid experience__item">
+            <p class="meta-data">2015 &#8211; 2017</p>
+            <div>
+              <p class="experience__item__title">Business Analyst</p>
+              <p class="meta-data">Auto-Owners Insurance</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <style>
+
+  /* Sets theh bg color and base padding */
+
+  .experience {
+    background-color: var(--moss-600);
+    font-family: var(--font-sans);
+    color: var(--moss-100);
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+  }
+
+  .section__title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-xl);
+    font-weight: var(--weight-base);
+    line-height: var(--leading-xs);
+  }
+
+  .two-up__title {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-xl);
+    font-weight: var(--weight-med);
+    line-height: var(--leading-sm);
+  }
+
+  .grid--two-up {
+    display: grid;
+    row-gap: 2.5rem;
+    align-items: baseline;
+  }
+
+  .section__title--approach {
+    color: var(--moss-300);
+  }
+
+  .experience__subhead {
+    color: var(--socks-400);
+  }
+
+  .experience__copy {
+    color: var(--moss-300);
+  }
+
+  .meta-data {
+    font-family: var(--font-sans);
+    /* font-size: var(--font-size-base); */
+    color: var(--moss-300);
+    white-space: nowrap;
+  }
+
+  .section__title--experience {
+    color: var(--moss-100);
+  }
+
+  .experience__item {
+    grid-template-columns: 1fr;
+  }
+
+  .experience__list {
+    display: grid;
+    row-gap: 3rem;
+  }
+
+  @media (min-width: 865px) {
+    .grid--two-up {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 7%;
+    }
+  }
+
+  @media (min-width: 550px) {
+    .experience__item {
+      grid-template-columns: 8rem minmax(8rem, auto);
+      row-gap: 0.5rem;
+      column-gap: 2rem;
+    }
+  }
+
+</style>

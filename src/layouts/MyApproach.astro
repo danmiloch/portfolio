@@ -1,0 +1,56 @@
+---
+import "@fontsource/inter/400.css";
+import "@fontsource/besley/400-italic.css";
+import "@fontsource/besley/500.css";
+import "../styles/global.css";
+import home_drawing from "../images/home_drawing.svg";
+---
+
+<section class="my-approach">
+  <div class="container grid">
+    <img src={home_drawing} alt="" />
+    <div class="flow">
+      <h4 class="subhead subhead--my-approach">My Approach</h4>
+      <p class="section__title section__title--my-approach">
+        Guided by research, led by curiousity
+      </p>
+      <p>I’m a UX and Product Designer in the insurance & healthcare space, where I’ve been working since 2018.
+
+        I love making tools that help people do good work, and I care about how things look and feel too. </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    max-width: 400px;
+    margin-top: -2rem;
+  }
+  .my-approach {
+    background-color: var(--moss-200);
+  }
+
+  .section__title--my-approach {
+    color: var(--moss-600);
+  }
+
+  .subhead--my-approach {
+    color: var(--moss-500);
+  }
+
+  p {
+    color: var(--panda-500);
+  }
+
+  @media (min-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    img {
+        margin-bottom: -3rem;
+    }
+  }
+
+</style>

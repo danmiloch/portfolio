@@ -20,6 +20,7 @@ RESET
 html,
 body {
   background-color: #fff;
+  height: 100%;
 }
 
 body {
@@ -68,7 +69,7 @@ select {
   }
 }
 
-/*  VARIABLES */
+/*  VARIABLES  */
 
 :root {
   --moss-100: #FCFCFC;
@@ -88,26 +89,30 @@ select {
   --panda-600:#333333;
   --color-bg: var(--moss-100);
   --color-font-base: var(--panda-600);
+  --color-link: var(--panda-500);
   --space-;
   --trans-base: all 0.2s ease-in-out;
   --max-width: 75rem;
-  --padding-base: 0 2rem;
+  --padding-base: 2rem;
   --font-serif: "Besley", serif;
   --font-sans: "Inter", sans-serif;
-  --font-size-sm: 1rem;
-  --font-size-base: 1.125rem;
-  --font-size-med: 1.5rem;
-  --font-size-lg: 2rem;
-  --font-size-xl: 2.625rem;
+  --font-size-sm: .875rem;
+  --font-size-base: 1rem;
+  --font-size-med: 1.125rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.625rem;
   --weight-base: 400;
   --weight-med: 500;
   --weight-bold: 600;
-  --leading-body: 1.5;
+  --leading-body: 1.75;
   --leading-med: 1.44;
   --leading-sm: 1.33;
   --leading-xs: 1.2;
-  --flow-space: 1.5rem;
+  --flow-space: 1.125rem;
 }
+
+/* DEFAULTS */
 
 body {
   background-color: var(--color-bg);
@@ -115,6 +120,9 @@ body {
   color: var(--panda-600);
   height: 100vh;
   font-size: var(--font-size-base);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow-y: scroll;
   /* animation: body-animation 1s; */
 }
 
@@ -126,36 +134,83 @@ body {
 
 /* Container constrains max-width and adds a little padding for small screens */
 
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+p {
+  font-family: var(--font-sans);
+  line-height: var(--leading-body);
+}
+
+h1, 
+.heading-800 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xxl);
+  line-height: var(--leading-xs);
+}
+
+h2, 
+.heading-700 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  line-height: var(--leading-xs);
+}
+
+h3, 
+.heading-600 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-lg);
+  line-height: var(--leading-sm);
+}
+
+h4, 
+.heading-500 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-med);
+  line-height: var(--leading-med);
+}
+
+h4.subhead {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-body);
+  letter-spacing: 1px;
+}
+
+em {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-base);
+  font-weight: var(--weight-base);
+}
+
+/* UTILITIES */
+
 .container {
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--padding-base);
+  margin-inline: auto;
+	padding-inline: var(--padding-base);
 }
 
 .flow > * + * {
   margin-top: var(--flow-space, 1.5rem);
 }
 
+.stack {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
 
-h1 {
+.grid {
+  display: grid;
+  gap: 1.125rem;
+}
+
+.section__title {
   font-family: var(--font-serif);
   font-size: var(--font-size-xl);
-  font-weight: var(--weight-med);
-  line-height: var(--leading-xs);
-}
-
-h2 {
-  font-family: var(--font-serif);
-  font-size: var(--font-size-lg);
-  font-weight: var(--weight-med);
-  line-height: var(--leading-sm);
-}
-
-h4.subhead {
-  font-family: var(--font-sans);
   font-weight: var(--weight-base);
-  text-transform: uppercase;
-  font-size: var(--font-size-sm);
-  line-height: var(--leading-body);
-  letter-spacing: 1px;
+  line-height: var(--leading-xs);
 }
