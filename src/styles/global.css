@@ -28,6 +28,8 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -137,6 +139,12 @@ body {
 a {
   color: var(--color-link);
   text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  transition: color .1s ease-in-out;
+}
+
+a:hover {
+  color: var(--panda-400);
 }
 
 p {
