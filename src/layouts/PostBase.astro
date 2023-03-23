@@ -1,15 +1,13 @@
 ---
-import "@fontsource/inter/400.css";
-import "@fontsource/besley/400-italic.css";
-import "@fontsource/besley/500.css";
-import "../styles/global.css";
+import BaseLayout from "./BaseLayout.astro";
 ---
 
-<section class="post container grid">
-  <div class="post__heading">
+<section class="post container grid grid--lg">
+  <div class="post__heading grid">
     <h1 class="heading-700">Post name</h1>
     <time datetime="2023-03-22">March 3, 2023</time>
   </div>
+  <hr>
   <a href="/blog">Back to posts</a>
 
   <p class="post__content">
@@ -35,19 +33,50 @@ import "../styles/global.css";
     ex placeat fugiat, corrupti sunt labore amet hic debitis iste deleniti
     excepturi ea nihil aliquid qui voluptatum numquam ipsum veniam?
   </p>
+
 </section>
 
 <style>
 
-    .post {
-        margin: 10vh auto;
+    p {
+        color: var(--panda-500);
     }
+
+  .post {
+    margin: 10vh auto;
+  }
 
   time {
     color: var(--panda-500);
   }
 
+  hr {
+    border-width: 1px;
+    border-style: solid;
+    color: var(--moss-200);
+  }
+
   .post__content {
     max-width: 40rem;
+  }
+
+  .sidenote,
+  .marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+  }
+  ...label.sidenote-number {
+    display: inline;
+  }
+  label.margin-toggle:not(.sidenote-number) {
+    display: none;
   }
 </style>

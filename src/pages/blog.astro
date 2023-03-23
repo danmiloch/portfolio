@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PostBase from '../layouts/PostBase.astro';
 ---
 
 <BaseLayout title={'Dan Miloch / Blog'}>
-
-<PostBase />
+    <ul class="container">
+        <li><a href="/posts/post-1/">Post 1</a></li>
+        <li><a href="/posts/post-2/">Post 2</a></li>
+        <li><a href="/posts/post-3/">Post 3</a></li>
+      </ul>
 </BaseLayout>

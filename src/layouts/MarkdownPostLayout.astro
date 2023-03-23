@@ -1,0 +1,51 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+  <section class="post">
+    <div class="post__heading grid container">
+      <h1 class="heading-700">{frontmatter.title}</h1>
+      <!-- <p>Written by {frontmatter.author}</p> -->
+      <time>{frontmatter.pubDate.slice(0, 10)}</time>
+      <a href="/blog">Back to posts</a>
+    </div>
+    <div class="container">
+      <slot />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+    a {
+        width: fit-content;
+    }
+
+  p {
+    color: var(--panda-500);
+    margin-bottom: 1rem;
+  }
+
+  .post {
+    margin: 10vh auto;
+  }
+
+  .post__heading {
+    margin-bottom: 3rem;
+  }
+
+  time {
+    color: var(--panda-500);
+  }
+
+  /* hr {
+      border-width: 1px;
+      border-style: solid;
+      color: var(--moss-200);
+    } */
+
+  .post__content {
+    max-width: 40rem;
+  }
+</style>
