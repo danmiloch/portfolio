@@ -6,7 +6,7 @@ const allPosts = await Astro.glob('../pages/posts/*.mdx');
 <BaseLayout title={'Dan Miloch / Blog'}>
   <div class="blog container grid grid--lg">
     <h1 class="heading-700">Blog</h1>
-    <p>A smattering of writing on design.</p>
+    <p>A smattering of writing on designly.</p>
     <ul class=" grid">
       {allPosts.map((post) => <li class="grid grid--sm archive__item"><time>{post.frontmatter.pubDate}</time> <a href={post.url}>{post.frontmatter.title}</a></li>)}
       </ul>
