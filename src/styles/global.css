@@ -126,7 +126,6 @@ body {
   grid-template-rows: auto 1fr auto;
   overflow-y: scroll;
   /* animation: body-animation 1s; */
-
 }
 
 /* @keyframes body-animation {
@@ -214,7 +213,11 @@ em {
 
 .grid {
   display: grid;
-  gap: 1.125rem;
+  gap: 1.5rem;
+}
+
+.grid--sm {
+  gap: .5rem;
 }
 
 .grid--lg {

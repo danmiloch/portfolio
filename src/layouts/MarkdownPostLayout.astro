@@ -31,6 +31,16 @@ const { frontmatter } = Astro.props;
     margin: 10vh auto;
   }
 
+.post {
+  animation: body-animation 1s;
+  }
+
+@keyframes body-animation {
+  from {
+   opacity:0
+  }
+
+
   .post__heading {
     margin-bottom: 3rem;
   }
@@ -48,4 +58,7 @@ const { frontmatter } = Astro.props;
   .post__content {
     max-width: 40rem;
   }
+
+
+ } */
 </style>
