@@ -1,0 +1,91 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+  <section class="post">
+    <div class="post__heading grid container">
+      <div class="post__heading--group">
+        <h1 class="heading-700 post__heading--title">{frontmatter.title}</h1>
+        <a href="/blog">Back to posts</a>
+      </div>
+      <time>{frontmatter.pubDate.slice(0, 10)}</time>
+    </div>
+    <div class="container">
+    <div class="post__content">
+      <slot />
+    </div>
+  </div>
+  </section>
+</BaseLayout>
+
+<style>
+  a {
+    width: fit-content;
+  }
+
+  h1 {
+    margin-right: auto;
+  }
+
+  .post__heading--group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+.post__heading--title {
+  max-width: 40rem;
+}
+
+  p {
+    color: var(--panda-500);
+    margin-bottom: 1rem;
+  }
+
+  .post {
+    margin: 10vh auto;
+  }
+
+  .post {
+    animation: body-animation 1s;
+  }
+
+  .post__heading {
+    margin-bottom: 3rem;
+  }
+
+  .post__content {
+    max-width: 40rem;
+  }
+
+  time {
+    color: var(--panda-500);
+  }
+
+  /* hr {
+      border-width: 1px;
+      border-style: solid;
+      color: var(--moss-200);
+    } */
+
+  .post__content {
+    max-width: 40rem;
+  }
+
+  @keyframes body-animation {
+    from {
+      opacity: 0;
+    }
+  }
+
+@media (min-width: 930px) {
+  .post__heading--group {
+    grid-template-columns: 1fr 7rem;
+    gap: 2rem;
+    align-items: baseline;
+  }
+}
+
+</style>
