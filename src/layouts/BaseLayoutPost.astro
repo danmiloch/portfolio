@@ -13,14 +13,43 @@ const { frontmatter } = Astro.props;
       <time>{frontmatter.pubDate.slice(0, 10)}</time>
     </div>
     <div class="container">
-    <div class="post__content">
+      <p class="">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente
+        quaerat dicta distinctio placeat laboriosam, officia ducimus rerum
+        libero, quod aperiam corporis neque. Autem inventore quos ducimus a non,
+        assumenda rem facere numquam aliquam tenetur necessitatibus repellendus
+        velit! Veniam, iste blanditiis accusantium incidunt esse quia quos
+        reiciendis dolor aperiam aspernatur sunt quae magnam iusto nisi eius.
+        Tempora quis esse non aperiam quas nulla sed, ullam dicta vitae sit
+        nostrum. Cupiditate corrupti illum aliquam iusto suscipit maiores iste
+        voluptatum eligendi, corporis vero blanditiis. Consequatur rerum at
+        dolore necessitatibus, possimus nisi, culpa cupiditate iste tenetur
+        totam temporibus hic quos illum officia natus, voluptates odit optio
+        voluptatem reprehenderit soluta. Quam libero quasi sit pariatur
+        repellendus dolorum facere. Accusamus eum corporis ab corrupti, quaerat
+        earum ex voluptatem consequuntur laboriosam porro culpa esse deserunt.
+        Quam laboriosam, facilis quos aut, hic atque numquam molestias impedit
+        necessitatibus amet magnam delectus maiores, similique consequuntur illo
+        error! Vero, fugiat quia. Aliquid explicabo, laudantium culpa vel
+        mollitia voluptatibus natus consectetur soluta similique quam et nostrum
+        eveniet numquam sunt. Quaerat exercitationem recusandae neque porro
+        incidunt asperiores voluptatum quo est quidem soluta. Enim, eveniet
+        repellat voluptatibus magni tempore, ab sequi a qui adipisci vitae iste
+        rerum eius dignissimos quos quisquam ratione eaque voluptas aspernatur
+        non tempora, optio error? Aliquid voluptas quaerat reprehenderit
+        voluptatum adipisci beatae, itaque minus quasi pariatur hic consequuntur
+        in eaque inventore nobis vel voluptate.
+      </p>
       <slot />
     </div>
-  </div>
   </section>
 </BaseLayout>
 
 <style>
+  .grid {
+    gap: 0.7rem;
+  }
+
   a {
     width: fit-content;
   }
@@ -35,9 +64,9 @@ const { frontmatter } = Astro.props;
     gap: 1.5rem;
   }
 
-.post__heading--title {
-  max-width: 40rem;
-}
+  .post__heading--title {
+    max-width: 40rem;
+  }
 
   p {
     color: var(--panda-500);
@@ -80,12 +109,11 @@ const { frontmatter } = Astro.props;
     }
   }
 
-@media (min-width: 930px) {
-  .post__heading--group {
-    grid-template-columns: 1fr 7rem;
-    gap: 2rem;
-    align-items: baseline;
+  @media (min-width: 930px) {
+    .post__heading--group {
+      grid-template-columns: 1fr 7rem;
+      gap: 2rem;
+      align-items: baseline;
+    }
   }
-}
-
 </style>

@@ -79,6 +79,7 @@ select {
   --moss-300: #B8C4BB;
   --moss-400: #80BD66;
   --moss-500: #557B42;
+  --moss-550: #3E5E31;
   --moss-600: #2A3F21;
   --socks-400: #FF7745;
   --socks-500: #F25824;
@@ -87,7 +88,7 @@ select {
   --panda-200:#F3F3F3;
   --panda-300:#BFBFBF;
   --panda-400:#999999;
-  --panda-500:#666666;
+  --panda-500:#767676;
   --panda-600:#333333;
   --color-bg: var(--moss-100);
   --color-font-base: var(--panda-600);
@@ -112,6 +113,13 @@ select {
   --leading-sm: 1.33;
   --leading-xs: 1.2;
   --flow-space: 1.125rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-48: 3rem;
+  --spacing-64: 4rem;
+  --spacing-80: 5rem;
+  --spacing-120: 7.5rem;
 }
 
 /* DEFAULTS */
@@ -124,7 +132,7 @@ body {
   font-size: var(--font-size-base);
   display: grid;
   grid-template-rows: auto 1fr auto;
-  overflow-y: scroll;
+  overflow-x: hidden;
   /* animation: body-animation 1s; */
 }
 
@@ -201,6 +209,18 @@ em {
   margin-inline: auto;
 	padding-inline: var(--padding-base);
 }
+
+.full-width {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: peachpuff;
+}
+
+.image-height {
+  max-height: 40vh;
+  object-fit: cover;
+}
+
 
 .flow > * + * {
   margin-top: var(--flow-space, 1.5rem);
