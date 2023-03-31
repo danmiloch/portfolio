@@ -1,3 +1,4 @@
+
 /* ---------------------------------------------------------------------------------------------
 RESET
 (Based on ‘A Modern CSS Reset’ by Andy Bell: https://dev.to/hankchizljaw/a-modern-css-reset-6p3)
@@ -135,6 +136,12 @@ body {
   overflow-x: hidden;
   /* animation: body-animation 1s; */
 }
+
+body {
+  visibility: hidden;
+  opacity: 0;
+}
+
 
 /* @keyframes body-animation {
   from {
