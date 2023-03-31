@@ -33,11 +33,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  visibility: hidden;
-  opacity: 0;
-}
-
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
