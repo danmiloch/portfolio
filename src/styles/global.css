@@ -33,6 +33,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  visibility: hidden;
+  opacity: 0;
+}
+
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
@@ -136,12 +141,6 @@ body {
   overflow-x: hidden;
   /* animation: body-animation 1s; */
 }
-
-body {
-  visibility: hidden;
-  opacity: 0;
-}
-
 
 /* @keyframes body-animation {
   from {
@@ -257,3 +256,4 @@ em {
   font-weight: var(--weight-base);
   line-height: var(--leading-xs);
 }
+
