@@ -217,6 +217,15 @@ em {
   background-color: peachpuff;
 }
 
+.post__content {
+  max-width: 40rem;
+}
+
+.post__content .full-width {
+  margin-left: calc(88% - 50vw);
+  margin-right: calc(10% - 50vw);
+}
+
 .image-height {
   max-height: 40vh;
   object-fit: cover;
@@ -251,4 +260,5 @@ em {
   font-weight: var(--weight-base);
   line-height: var(--leading-xs);
 }
+
 
