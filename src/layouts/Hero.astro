@@ -3,10 +3,12 @@ import "@fontsource/inter/400.css";
 import "@fontsource/besley/400-italic.css";
 import "@fontsource/besley/500.css";
 import "../styles/global.css";
+import headshot_temp from "../images/headshot_temp.png"
 ---
 
 <section class="hero">
     <div class="container grid">
+      <div class="">
 
 <h1>Designing digital tools for serious work</h1>
   <p>
@@ -14,6 +16,24 @@ import "../styles/global.css";
     working since 2018. I love helping teams make tools that help people do good
     work, and I care about how things look and feel too. While you’re here,
     check out my <a href="/blog">blog</a>, learn about <a href="/work">my work</a> in case studies, or download my CV.
-  </p>
+  </p></div>  
+
+  <img src={headshot_temp} alt="">
+
 </div>
 </section>
+
+<style>
+
+@media (min-width: 600px) {
+
+  .grid {
+  grid-template-columns: 40% 1fr; 
+  align-items: center;
+  gap: 4rem;
+}
+
+}
+
+
+</style>
